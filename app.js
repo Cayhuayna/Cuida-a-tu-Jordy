@@ -103,6 +103,7 @@ const viewNames = {
   food: "MERCADO · ALIMENTOS",
   homegoods: "MERCADO · HOGAR",
   care: "MERCADO · ASEO",
+  penalty: "MINIJUEGO · PENALES",
 };
 function setPageView(view) {
   document.body.dataset.view = view;

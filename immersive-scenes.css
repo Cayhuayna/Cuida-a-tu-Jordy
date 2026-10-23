@@ -8,51 +8,67 @@ body { min-height: 100vh; }
 .category-nav a.active { color: var(--green); border-bottom-color: #9fbd61; }
 .category-nav a:first-letter { font-size: 16px; }
 .home-main { transition: background .35s ease; }
+.progress-badge { display: flex; align-items: center; gap: 9px; padding: 7px 10px; border: 1px solid #ffffff38; border-radius: 8px; color: #fff; background: #ffffff13; white-space: nowrap; font: 600 10px var(--sans); }
+.progress-badge b { color: #d8ed86; }
 
 /* Jordy view: composition modeled after the supplied full-screen reference. */
 body[data-view="jordy"] { overflow: hidden; background: #748a68; }
 body[data-view="jordy"] .topline, body[data-view="inventory"] .topline,
 body[data-view="market"] .topline, body[data-view="food"] .topline,
-body[data-view="homegoods"] .topline, body[data-view="care"] .topline { display: none; }
+body[data-view="homegoods"] .topline, body[data-view="care"] .topline,
+body[data-view="penalty"] .topline { display: none; }
 body[data-view="jordy"] .site-header, body[data-view="inventory"] .site-header,
 body[data-view="market"] .site-header, body[data-view="food"] .site-header,
-body[data-view="homegoods"] .site-header, body[data-view="care"] .site-header { height: 72px; color: white; background: #174932; padding-left: 3.4%; padding-right: 3.4%; }
+body[data-view="homegoods"] .site-header, body[data-view="care"] .site-header,
+body[data-view="penalty"] .site-header { height: 72px; color: white; background: #174932; padding-left: 3.4%; padding-right: 3.4%; }
 body[data-view="jordy"] .brand, body[data-view="inventory"] .brand,
 body[data-view="market"] .brand, body[data-view="food"] .brand,
-body[data-view="homegoods"] .brand, body[data-view="care"] .brand { color: #f7f8ef; }
+body[data-view="homegoods"] .brand, body[data-view="care"] .brand,
+body[data-view="penalty"] .brand { color: #f7f8ef; }
 body[data-view="jordy"] .brand-mark, body[data-view="inventory"] .brand-mark,
 body[data-view="market"] .brand-mark, body[data-view="food"] .brand-mark,
-body[data-view="homegoods"] .brand-mark, body[data-view="care"] .brand-mark { border: 1px solid #a2cc72; background: #16442f; }
+body[data-view="homegoods"] .brand-mark, body[data-view="care"] .brand-mark,
+body[data-view="penalty"] .brand-mark { border: 1px solid #a2cc72; background: #16442f; }
 body[data-view="jordy"] .search, body[data-view="inventory"] .search,
 body[data-view="market"] .search, body[data-view="food"] .search,
-body[data-view="homegoods"] .search, body[data-view="care"] .search { max-width: 560px; background: #ffffff22; border-color: #ffffff30; }
+body[data-view="homegoods"] .search, body[data-view="care"] .search,
+body[data-view="penalty"] .search { max-width: 560px; background: #ffffff22; border-color: #ffffff30; }
 body[data-view="jordy"] .search input, body[data-view="inventory"] .search input,
 body[data-view="market"] .search input, body[data-view="food"] .search input,
-body[data-view="homegoods"] .search input, body[data-view="care"] .search input { color: white; }
+body[data-view="homegoods"] .search input, body[data-view="care"] .search input,
+body[data-view="penalty"] .search input { color: white; }
 body[data-view="jordy"] .search input::placeholder, body[data-view="inventory"] .search input::placeholder,
 body[data-view="market"] .search input::placeholder, body[data-view="food"] .search input::placeholder,
-body[data-view="homegoods"] .search input::placeholder, body[data-view="care"] .search input::placeholder { color: #e4ede0b8; }
+body[data-view="homegoods"] .search input::placeholder, body[data-view="care"] .search input::placeholder,
+body[data-view="penalty"] .search input::placeholder { color: #e4ede0b8; }
 body[data-view="jordy"] .search button, body[data-view="inventory"] .search button,
 body[data-view="market"] .search button, body[data-view="food"] .search button,
-body[data-view="homegoods"] .search button, body[data-view="care"] .search button { color: #173e2c; background: #a7d47b; }
+body[data-view="homegoods"] .search button, body[data-view="care"] .search button,
+body[data-view="penalty"] .search button { color: #173e2c; background: #a7d47b; }
 body[data-view="jordy"] .cart-button, body[data-view="inventory"] .cart-button,
 body[data-view="market"] .cart-button, body[data-view="food"] .cart-button,
-body[data-view="homegoods"] .cart-button, body[data-view="care"] .cart-button { color: white; }
+body[data-view="homegoods"] .cart-button, body[data-view="care"] .cart-button,
+body[data-view="penalty"] .cart-button { color: white; }
 body[data-view="jordy"] .cart-icon, body[data-view="inventory"] .cart-icon,
 body[data-view="market"] .cart-icon, body[data-view="food"] .cart-icon,
-body[data-view="homegoods"] .cart-icon, body[data-view="care"] .cart-icon { color: white; }
+body[data-view="homegoods"] .cart-icon, body[data-view="care"] .cart-icon,
+body[data-view="penalty"] .cart-icon { color: white; }
 body[data-view="jordy"] .fullscreen-button, body[data-view="inventory"] .fullscreen-button,
 body[data-view="market"] .fullscreen-button, body[data-view="food"] .fullscreen-button,
-body[data-view="homegoods"] .fullscreen-button, body[data-view="care"] .fullscreen-button { color: white; border-color: #ffffff55; background: #ffffff14; }
+body[data-view="homegoods"] .fullscreen-button, body[data-view="care"] .fullscreen-button,
+body[data-view="penalty"] .fullscreen-button { color: white; border-color: #ffffff55; background: #ffffff14; }
 body[data-view="jordy"] .category-nav, body[data-view="inventory"] .category-nav,
 body[data-view="market"] .category-nav, body[data-view="food"] .category-nav,
-body[data-view="homegoods"] .category-nav, body[data-view="care"] .category-nav { position: relative; top: auto; height: 50px; gap: clamp(14px, 2.6vw, 40px); color: #214431; background: #e4ebd2; padding-left: 3.4%; padding-right: 3.4%; }
+body[data-view="homegoods"] .category-nav, body[data-view="care"] .category-nav,
+body[data-view="penalty"] .category-nav { position: relative; top: auto; height: 50px; gap: clamp(14px, 2.6vw, 40px); color: #214431; background: #e4ebd2; padding-left: 3.4%; padding-right: 3.4%; }
 body[data-view="jordy"] .category-nav a, body[data-view="inventory"] .category-nav a,
 body[data-view="market"] .category-nav a, body[data-view="food"] .category-nav a,
-body[data-view="homegoods"] .category-nav a, body[data-view="care"] .category-nav a { color: #214431; }
+body[data-view="homegoods"] .category-nav a, body[data-view="care"] .category-nav a,
+body[data-view="penalty"] .category-nav a { color: #214431; }
 body[data-view="jordy"] .delivery-note, body[data-view="inventory"] .delivery-note,
 body[data-view="market"] .delivery-note, body[data-view="food"] .delivery-note,
-body[data-view="homegoods"] .delivery-note, body[data-view="care"] .delivery-note { color: #294e37; font-weight: 700; letter-spacing: .12em; }
+body[data-view="homegoods"] .delivery-note, body[data-view="care"] .delivery-note,
+body[data-view="penalty"] .delivery-note { color: #294e37; font-weight: 700; letter-spacing: .12em; }
 body[data-view="jordy"] .home-main { display: grid; grid-template-columns: minmax(265px, 27vw) minmax(360px, 1fr) minmax(290px, 29vw); gap: 18px; width: 100%; max-width: none; height: calc(100vh - 122px); min-height: 0; padding: 20px 1.7% 18px; overflow: hidden; background: radial-gradient(ellipse at 50% 36%,#f7f3d858 0,transparent 47%),repeating-linear-gradient(90deg,transparent 0 13%,#ffffff0c 13.2% 13.6%,transparent 13.8% 26%),linear-gradient(180deg,#cbd6b9 0 63%,#849673 63.2%,#718261 100%); background-size: cover; }
 body[data-view="jordy"] .home-intro, body[data-view="inventory"] .home-intro,
 body[data-view="market"] .home-intro, body[data-view="food"] .home-intro,
@@ -133,6 +149,55 @@ body[data-view="inventory"] footer, body[data-view="jordy"] footer { display: no
 body[data-view="jordy"] .site-header, body[data-view="jordy"] .category-nav { flex-shrink: 0; }
 body:fullscreen .home-main { height: calc(100vh - 122px); }
 
+/* Penalty shootout mini-game. */
+body[data-view="penalty"] { overflow: hidden; background: #153e31; }
+body[data-view="penalty"] .home-intro, body[data-view="penalty"] .care-layout,
+body[data-view="penalty"] .inventory-section, body[data-view="penalty"] .catalog-section,
+body[data-view="penalty"] footer { display: none; }
+body[data-view="penalty"] .home-main { display: block; width: 100%; max-width: none; height: calc(100vh - 122px); min-height: 0; overflow: auto; padding: 16px clamp(18px,5vw,74px) 22px; background: radial-gradient(ellipse at 50% 15%,#679a66 0,#28644b 51%,#123d32 100%); }
+body[data-view="penalty"] .penalty-section { display: block; max-width: 1120px; margin: 0 auto; padding: 19px 24px; border: 1px solid #d4e3bb7a; border-radius: 18px; background: linear-gradient(145deg,#f8f7eaf2,#e8edd9ed); box-shadow: 0 22px 70px #071d1780; }
+.penalty-section { display: none; }
+.penalty-heading { display: flex; align-items: center; justify-content: space-between; gap: 22px; margin-bottom: 13px; }
+.penalty-heading .eyebrow { margin-bottom: 5px; }
+.penalty-heading h1 { margin: 0; color: #173f2e; font: 800 clamp(25px,3vw,37px)/1.05 var(--display); letter-spacing: -1.7px; }
+.penalty-heading p:last-child { margin: 7px 0 0; color: #6f786b; font-size: 12px; }
+.xp-card { min-width: 205px; padding: 10px 13px; border: 1px solid #e0e5d6; border-radius: 10px; background: #fffef8; color: #31533c; font-size: 11px; }
+.xp-track { height: 7px; margin: 8px 0 5px; overflow: hidden; border-radius: 99px; background: #e8eadd; }
+.xp-track i { display: block; width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg,#99ba56,#d5db72); transition: width .3s ease; }
+.xp-card small { color: #82877c; font-size: 9px; }
+.penalty-scoreboard { display: flex; justify-content: center; gap: clamp(26px,8vw,110px); margin: 11px auto 13px; color: white; }
+.penalty-scoreboard div { display: flex; align-items: baseline; gap: 7px; padding: 7px 14px; border: 1px solid #ffffff2c; border-radius: 10px; background: #103a2bc2; }
+.penalty-scoreboard b { color: #d6eb80; font: 800 20px var(--display); }
+.penalty-scoreboard span { font-size: 10px; }
+.stadium { position: relative; min-height: 330px; height: min(42vh,410px); overflow: hidden; border: 3px solid #ecf2d0; border-radius: 14px; background: radial-gradient(ellipse at 50% 100%,#65a354 0 25%,transparent 62%),linear-gradient(180deg,#153b39 0 43%,#237052 43.2%,#1a684a 100%); box-shadow: inset 0 0 65px #071c1d99; }
+.stadium:before { content: ""; position: absolute; inset: 0 0 38%; opacity: .42; background: repeating-linear-gradient(90deg,transparent 0 13%,#d9e5cb1a 13.2% 13.7%,transparent 13.9% 27%),radial-gradient(ellipse at 50% 0,#e4f2c854,transparent 68%); }
+.stadium-lights { position: absolute; inset: 12px 0 auto; color: #eef9be; text-align: center; font-size: 16px; text-shadow: 0 0 15px #e4ff9a; letter-spacing: 12px; }
+.stadium-score { position: absolute; z-index: 2; top: 43px; left: 50%; transform: translateX(-50%); padding: 6px 12px; border: 1px solid #e2efd770; border-radius: 99px; color: #f5f9db; background: #0e3026b8; font: 700 9px var(--sans); letter-spacing: .12em; white-space: nowrap; }
+.stadium-score span { padding: 0 8px; color: #c6de71; }
+.goal-frame { position: absolute; left: 50%; bottom: 44px; width: min(52%,500px); height: 68%; transform: translateX(-50%); }
+.goal-net { position: absolute; inset: 0; border: 9px solid #f3f1dd; border-bottom: 0; background: repeating-linear-gradient(0deg,#ffffff30 0 1px,transparent 1px 20px),repeating-linear-gradient(90deg,#ffffff30 0 1px,transparent 1px 20px),#dce9d711; box-shadow: 0 0 18px #efffce48; }
+.goalkeeper { position: absolute; z-index: 3; bottom: -5px; left: 50%; height: 100%; max-width: 65%; object-fit: contain; object-position: bottom; transform: translateX(-50%); mix-blend-mode: screen; filter: brightness(1.12) contrast(1.08) saturate(.8) drop-shadow(0 5px 8px #0a251e8a); transition: transform .4s cubic-bezier(.2,.8,.2,1); }
+.goalkeeper.dive-left { transform: translateX(calc(-50% - min(16vw,130px))) rotate(-13deg); }
+.goalkeeper.dive-center { transform: translateX(-50%) translateY(-13px) scale(1.04); }
+.goalkeeper.dive-right { transform: translateX(calc(-50% + min(16vw,130px))) rotate(13deg); }
+.goal-post { position: absolute; z-index: 4; top: 0; bottom: -5px; width: 9px; background: #f3f1dd; box-shadow: 0 0 10px #efffce45; }
+.left-post { left: 0; }.right-post { right: 0; }
+.goal-bar { position: absolute; z-index: 4; top: 0; left: 0; right: 0; height: 9px; background: #f3f1dd; }
+.football { position: absolute; z-index: 5; left: 50%; bottom: 13%; font-size: 31px; transform: translateX(-50%); filter: drop-shadow(0 5px 4px #10221780); transition: left .55s cubic-bezier(.2,.7,.25,1), bottom .55s ease, transform .55s ease; }
+.stadium.shot-left .football { left: 38%; bottom: 57%; transform: translate(-50%,-30%) scale(.65) rotate(-90deg); }
+.stadium.shot-center .football { left: 50%; bottom: 62%; transform: translate(-50%,-30%) scale(.65) rotate(90deg); }
+.stadium.shot-right .football { left: 62%; bottom: 57%; transform: translate(-50%,-30%) scale(.65) rotate(160deg); }
+.field-mark { position: absolute; bottom: -38%; left: 50%; width: 76%; height: 80%; transform: translateX(-50%); border: 2px solid #d9ecc33d; border-radius: 50%; }
+.penalty-message { position: absolute; z-index: 6; left: 50%; bottom: 10px; transform: translateX(-50%); width: max-content; max-width: 90%; padding: 8px 15px; border: 1px solid #e8f0d580; border-radius: 99px; color: white; background: #123b2ebd; text-align: center; font: 600 11px var(--sans); }
+.shot-controls { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 13px; }
+.shot-controls>p { margin: 0; color: #315740; font-size: 11px; font-weight: 700; }
+.shot-controls>div { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+.shot-controls button { border: 1px solid #b9cbaa; border-radius: 8px; padding: 10px 15px; color: #204632; background: #fffef8; font: 700 10px var(--sans); cursor: pointer; transition: transform .15s,background .15s; }
+.shot-controls button:hover:not(:disabled) { transform: translateY(-2px); background: #eaf1d9; }
+.shot-controls button:disabled { opacity: .55; cursor: wait; }
+.penalty-reward { margin: 10px 0 0; color: #7d8478; text-align: center; font-size: 9px; }
+body[data-view="penalty"] .site-header, body[data-view="penalty"] .category-nav { flex-shrink: 0; }
+
 @media (max-width: 900px) {
   body[data-view="jordy"] { overflow: auto; }
   body[data-view="jordy"] .home-main { grid-template-columns: minmax(230px,34%) minmax(0,1fr); height: auto; min-height: calc(100vh - 122px); overflow: visible; }
@@ -159,4 +224,19 @@ body:fullscreen .home-main { height: calc(100vh - 122px); }
   body[data-view="jordy"] .inventory-grid { grid-template-columns: 1fr; }
   body[data-view] .home-main { height: calc(100vh - 112px); padding: 14px; }
   body[data-view="jordy"] .home-main { height: auto; }
+  body[data-view="penalty"] { overflow: auto; }
+  body[data-view="penalty"] .home-main { height: calc(100vh - 112px); padding: 12px; }
+  body[data-view="penalty"] .penalty-section { padding: 15px 12px; }
+  .penalty-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .xp-card { width: 100%; }
+  .penalty-scoreboard { gap: 7px; }
+  .penalty-scoreboard div { flex-direction: column; align-items: center; gap: 2px; padding: 6px 9px; }
+  .penalty-scoreboard b { font-size: 17px; }
+  .penalty-scoreboard span { font-size: 8px; text-align: center; }
+  .stadium { height: 40vh; min-height: 285px; }
+  .goal-frame { width: 76%; height: 64%; bottom: 45px; }
+  .goalkeeper { max-width: 77%; }
+  .shot-controls { gap: 8px; }
+  .shot-controls>div { gap: 5px; }
+  .shot-controls button { padding: 9px 8px; font-size: 9px; }
 }
