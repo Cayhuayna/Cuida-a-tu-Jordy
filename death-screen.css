@@ -1,0 +1,63 @@
+body.game-over {
+  filter: grayscale(1) contrast(1.08);
+}
+
+.death-overlay[hidden] { display: none; }
+.death-overlay {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  padding: 28px;
+  color: #171717;
+  background:
+    radial-gradient(ellipse at center, rgba(255,255,255,.72), rgba(18,18,18,.9)),
+    repeating-linear-gradient(0deg, rgba(0,0,0,.035) 0 1px, transparent 1px 3px),
+    #bcb8af;
+  font-family: Georgia, "Times New Roman", serif;
+  filter: grayscale(1);
+}
+.death-card {
+  width: min(100%, 620px);
+  padding: clamp(24px, 5vw, 48px);
+  text-align: center;
+  border: 1px solid #343434;
+  outline: 7px double #343434;
+  outline-offset: -13px;
+  background: rgba(238, 236, 229, .94);
+  box-shadow: 0 24px 80px rgba(0,0,0,.45);
+}
+.death-kicker {
+  margin: 0 0 18px;
+  font: 700 11px/1.4 "DM Sans", sans-serif;
+  letter-spacing: .22em;
+}
+.death-card img {
+  display: block;
+  width: min(54vw, 250px);
+  height: auto;
+  margin: 0 auto 16px;
+  mix-blend-mode: multiply;
+}
+.death-card h1 {
+  max-width: 500px;
+  margin: 0 auto 14px;
+  font-size: clamp(28px, 5vw, 46px);
+  line-height: 1.04;
+  text-transform: uppercase;
+}
+.death-copy { margin: 0 auto 24px; color: #454545; font-size: 17px; }
+.death-card button {
+  border: 1px solid #171717;
+  border-radius: 2px;
+  padding: 13px 22px;
+  color: #f5f3ed;
+  background: #171717;
+  font: 700 13px "DM Sans", sans-serif;
+  letter-spacing: .05em;
+  cursor: pointer;
+}
+.death-card button:hover { background: #393939; }
+.death-card button:focus-visible { outline: 3px solid #777; outline-offset: 3px; }

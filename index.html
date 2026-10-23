@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f4ef" />
+  <meta name="description" content="Cuida a tu Jordy con productos del mercado local." />
+  <title>Cuida a tu Jordy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pet.css" />
+  <link rel="stylesheet" href="pet-fixes.css" />
+  <link rel="stylesheet" href="home-care.css" />
+  <link rel="stylesheet" href="health-stat.css" />
+  <link rel="stylesheet" href="opaque-pet.css" />
+  <link rel="stylesheet" href="death-screen.css" />
+  <link rel="stylesheet" href="immersive-scenes.css" />
+</head>
+<body>
+  <div class="topline">El mercado de productos que Jordy necesita · Compras de demostración</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Cuida a tu Jordy, inicio"><span class="brand-mark">J<span>♡</span></span><span class="brand-name">Cuida a tu <span>Jordy</span></span></a>
+    <form class="search" id="search-form" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Busca algo para Jordy" aria-label="Buscar productos" /><button type="submit">Buscar</button></form>
+    <div class="header-actions"><button class="fullscreen-button" id="fullscreen-toggle" type="button" aria-label="Activar pantalla completa"><span>⛶</span><span id="fullscreen-label">Pantalla completa</span></button><button class="cart-button" id="cart-toggle" aria-label="Abrir carrito"><span class="cart-icon" aria-hidden="true">▱</span><span class="cart-label">Canastita</span><span class="cart-count" id="cart-count">0</span></button></div>
+  </header>
+  <nav class="category-nav" aria-label="Navegación principal"><a href="#cuidar" data-view="jordy" class="active">⌂ <span>Jordy</span></a><a href="#inventario" data-view="inventory">♧ <span>Sus productos</span></a><a href="#catalogo" data-view="market" data-nav-category="Todos">🛒 <span>Mercado</span></a><a href="#catalogo" data-nav-category="Alimentos" data-view="food">⚒ <span>Alimentos</span></a><a href="#catalogo" data-nav-category="Hogar" data-view="homegoods">⌂ <span>Hogar</span></a><a href="#catalogo" data-nav-category="Belleza" data-view="care">✧ <span>Aseo</span></a><span class="delivery-note" id="scene-label">TU COMPAÑERO DEL MERCADO</span></nav>
+
+  <main id="inicio" class="home-main">
+    <section class="page-intro home-intro" id="cuidar"><div><p class="eyebrow"><span></span> TU COMPAÑERO DEL MERCADO</p><h1>Cuida a tu <em>Jordy</em></h1><p>Hazle compañía y encuentra en el mercado lo que necesita para sentirse bien.</p></div><div class="status-pill"><span class="status-dot"></span><span id="mood-label">Jordy está esperando</span></div></section>
+
+    <section class="care-layout" aria-label="Habitación y necesidades de Jordy">
+      <div class="pet-column">
+        <div class="pet-room" id="pet-room">
+          <div class="room-window"><span></span><i></i></div><div class="room-shelf"><b>🪴</b><b>📚</b><b>🌼</b></div>
+          <div class="room-art"><span>✳</span><small>HOGAR<br />DULCE<br />HOGAR</small></div>
+          <div class="room-rug"></div><div class="pet-shadow"></div>
+          <img class="jordy-image" src="assets/jordy.png" alt="Jordy en su habitación" />
+          <div class="pet-thought" id="pet-thought">¡Hola! ¿Qué hacemos hoy?</div>
+          <div class="pet-nameplate"><span>✦</span><div><strong>Jordy</strong><small>Tu compañero de Cayhuayna</small></div><span class="heart">♥</span></div>
+          <div class="room-plant">🪴</div>
+        </div>
+        <div class="pet-actions"><button id="pet-button" class="secondary-button"><span>♡</span> Acariciar a Jordy</button><span class="care-note">Un mimo aumenta su ánimo en +2%.</span></div>
+      </div>
+      <aside class="needs-card">
+        <div class="card-heading"><div><p class="eyebrow">¿CÓMO ESTÁ?</p><h2>Sus necesidades</h2></div><span class="sparkle">✳</span></div>
+        <div class="needs-grid">
+          <div class="need-row"><div class="need-label"><span class="need-icon food">♨</span><span><strong>Alimentación</strong><small id="food-caption">Tiene un poco de hambre</small></span><b id="food-value">70%</b></div><div class="meter"><i id="food-bar" class="food-bar"></i></div></div>
+          <div class="need-row"><div class="need-label"><span class="need-icon energy">☾</span><span><strong>Energía</strong><small id="energy-caption">Está listo para el día</small></span><b id="energy-value">70%</b></div><div class="meter"><i id="energy-bar" class="energy-bar"></i></div></div>
+          <div class="need-row"><div class="need-label"><span class="need-icon clean">✧</span><span><strong>Aseo</strong><small id="clean-caption">Se siente fresquito</small></span><b id="clean-value">70%</b></div><div class="meter"><i id="clean-bar" class="clean-bar"></i></div></div>
+          <div class="need-row"><div class="need-label"><span class="need-icon joy">♡</span><span><strong>Ánimo</strong><small id="joy-caption">Está de buen humor</small></span><b id="joy-value">70%</b></div><div class="meter"><i id="joy-bar" class="joy-bar"></i></div></div>
+        </div>
+        <div class="health-row"><div class="health-label"><span class="health-icon">✚</span><span><strong>Salud · HP</strong><small id="health-caption">Se siente saludable</small></span><b id="health-value">100% / 200%</b></div><div class="meter health-meter"><i id="health-bar"></i></div></div>
+        <div class="needs-tip"><span>✦</span><p>Jordy se siente mejor cuando cuidas un poquito de cada necesidad.</p></div>
+      </aside>
+    </section>
+
+    <section class="inventory-section" id="inventario"><div class="inventory-heading"><div><p class="eyebrow">LO QUE COMPRASTE</p><h2>Inventario de Jordy</h2><p>Usa tus productos para alimentarlo, asearlo y animarlo.</p></div><a class="shop-link" href="#catalogo">Ver productos <span>↗</span></a></div><div class="inventory-grid" id="inventory-grid"></div><div class="inventory-empty" id="inventory-empty"><div class="empty-basket">▱</div><div><strong>Su canastita está vacía</strong><p>Agrega productos del mercado y confirma una compra de demostración. Los productos pasarán directamente a este inventario.</p></div><a href="#catalogo">Explorar productos <span>→</span></a></div></section>
+
+    <section class="catalog-section" id="catalogo"><div class="section-heading"><div><p class="eyebrow">EL MERCADO DE JORDY</p><h2>¿Qué necesita hoy?</h2><p class="section-subtitle">Compra productos para cubrir sus necesidades. Las compras son de demostración.</p></div></div><div class="catalog-controls"><div class="filters" id="filters" aria-label="Filtrar por categoría"></div><label class="sort-label">Ordenar por <select id="sort-select"><option value="featured">Destacados</option><option value="price-low">Precio: menor a mayor</option><option value="price-high">Precio: mayor a menor</option></select></label></div><div class="product-grid" id="products"></div><p class="empty-state" id="empty-state" hidden>No encontramos productos con esa búsqueda. Prueba otra palabra.</p></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">J<span>♡</span></span><span class="brand-name">Cuida a tu <span>Jordy</span></span></a><p>Un compañero feliz, un mercado local.</p><small>© 2026 Cuida a tu Jordy · Compras de demostración</small></footer>
+  <div class="cart-overlay" id="cart-overlay" hidden></div><aside class="cart-drawer" id="cart-drawer" aria-label="Canastita" aria-hidden="true"><div class="cart-heading"><div><p class="eyebrow">SUS PRODUCTOS</p><h2>Canastita <span id="drawer-count">(0)</span></h2></div><button class="close-cart" id="close-cart" aria-label="Cerrar carrito">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><span>▱</span><strong>La canastita está vacía</strong><p>Agrega productos para cuidar a Jordy.</p></div><div class="cart-footer" id="cart-footer"><div><span>Total de demostración</span><strong id="cart-subtotal">S/ 0.00</strong></div><button id="checkout-button">Añadir a su inventario <span>→</span></button><small>No se cobra dinero · Demo local</small></div></aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <section class="death-overlay" id="death-overlay" role="dialog" aria-modal="true" aria-labelledby="death-title" hidden>
+    <div class="death-card">
+      <p class="death-kicker">CRÓNICA DEL HOGAR · FIN DEL RELATO</p>
+      <img src="assets/skull.png" alt="Calavera y huesos cruzados" />
+      <h1 id="death-title">TU JORDY A MUERTO POR TU CULPA MALVADO</h1>
+      <p class="death-copy">La habitación quedó en silencio. Cuida mejor de él la próxima vez.</p>
+      <button id="death-reset" type="button">Empezar de nuevo</button>
+    </div>
+  </section>
+  <script src="app.js"></script><script src="jordy.js"></script>
+</body>
+</html>
