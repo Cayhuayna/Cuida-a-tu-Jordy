@@ -9,7 +9,7 @@
   document.querySelector("#menu-play").onclick=()=>{
     const name=input.value.trim(); if(!name){input.focus();input.setCustomValidity("Escribe tu nombre para guardar tu tiempo.");input.reportValidity();return;}
     input.setCustomValidity("");progress.setPlayerName(name);document.querySelector("#mini-player-name").textContent=name;
-    menu.hidden=true;document.body.classList.add("game-started");window.jordySound?.play("start");
+    menu.hidden=true;document.body.classList.add("game-started");
   };
   input.oninput=()=>input.setCustomValidity("");
   function formatTime(s){const h=Math.floor(s/3600),m=Math.floor(s%3600/60);return h?h+" h "+m+" min":m?m+" min":s+" s";}

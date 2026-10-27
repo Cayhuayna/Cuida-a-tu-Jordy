@@ -1,6 +1,5 @@
-body.game-over {
-  filter: grayscale(1) contrast(1.08);
-}
+body.game-over { filter: none; }
+body.game-over > :not(.death-overlay):not(.game-menu) { filter: grayscale(1) contrast(1.08); }
 
 .death-overlay[hidden] { display: none; }
 .death-overlay {

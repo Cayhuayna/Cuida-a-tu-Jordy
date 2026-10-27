@@ -184,6 +184,7 @@ document.querySelector("#checkout-button").addEventListener("click", () => {
   saveCart();
   setCartOpen(false);
   document.querySelector("#inventario").scrollIntoView({ behavior: "smooth", block: "center" });
+  window.dispatchEvent(new CustomEvent("jordy-sound", { detail: { type: "purchase" } }));
   showToast("Productos añadidos al inventario de Jordy");
 });
 

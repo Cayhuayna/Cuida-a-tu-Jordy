@@ -28,6 +28,7 @@
 
     window.setTimeout(() => {
       const goal = direction !== keeperDirection;
+      window.dispatchEvent(new CustomEvent("jordy-sound", { detail: { type: goal ? "goal" : "save" } }));
       progressApi.recordPenalty(goal);
       renderScores();
       message.textContent = goal

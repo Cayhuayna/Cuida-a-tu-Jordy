@@ -350,6 +350,7 @@ document.querySelector("#sleep-button").addEventListener("click", (event) => {
     }
     window.clearInterval(timer);
     if (!gameOver) {
+      window.dispatchEvent(new CustomEvent("jordy-sound", { detail: { type: "sleep" } }));
       state.energy = clamp(Number(state.energy || 0) + 12);
       state.joy = clamp(Number(state.joy || 0) + 2);
       saveState();
