@@ -29,7 +29,7 @@
       <input id="player-name-input" maxlength="18" autocomplete="nickname" placeholder="Escribe tu nombre" />
       <div class="menu-actions"><button id="menu-play" type="button">▶ Jugar</button><button id="menu-how" type="button">Cómo se juega</button><button id="menu-settings" type="button">Configuración</button><button id="menu-ranking" type="button">🏆 Ranking local</button></div>
       <div class="menu-panel" id="menu-how-panel" hidden><strong>Cuida, juega y crece</strong><p>Alimenta a Jordy, mantenlo aseado, acarícialo y juega penales. Usa monedas para comprar productos. Cada hora de mundo cuenta como un día; Jordy descansa 15 minutos de ese ciclo.</p></div>
-      <div class="menu-panel" id="menu-settings-panel" hidden><label><input id="sound-setting" type="checkbox" checked /> Sonidos del juego</label><p>El modo esquina mantiene a Jordy visible mientras recorres las secciones de esta página.</p></div>
+      <div class="menu-panel" id="menu-settings-panel" hidden><label><input id="sound-setting" type="checkbox" checked /> Efectos de sonido</label><label class="music-control"><input id="music-setting" type="checkbox" checked /> Música del menú y del juego</label><label class="music-control">Volumen <input id="music-volume" type="range" min="0" max="1" step="0.05" value="0.22" /><span id="music-volume-label">22%</span></label><p>El modo esquina mantiene a Jordy visible mientras recorres las secciones de esta página.</p></div>
       <div class="menu-panel" id="menu-ranking-panel" hidden><strong>Quienes más tiempo cuidaron a Jordy</strong><div id="menu-ranking-list"></div><small>Ranking guardado en este navegador.</small></div>
     </div>
     <div class="menu-room-decor" aria-hidden="true"><span>🪴</span><span>🌙</span><span>⭐</span></div>
@@ -113,6 +113,6 @@
       <ul><li>🍯 25 mieles de abeja</li><li>🍫 8 chocolates artesanales</li><li>🧼 18 jabones de hierbas</li><li>🍎 25 manzanas de Cayhuayna</li><li>🧃 12 jugos naturales</li></ul>
       <button id="starter-kit-close" type="button">¡A cuidar a Jordy!</button>
     </div>
-  </section>  <script src="player-progress.js"></script><script src="app.js"></script><script src="jordy.js"></script><script src="minigames.js"></script><script src="lab.js"></script><script src="sound.js"></script><script src="game-shell.js"></script>
+  </section>  <script src="player-progress.js"></script><script src="app.js"></script><script src="jordy.js"></script><script src="minigames.js"></script><script src="lab.js"></script><script src="sound.js"></script><script src="music.js"></script><script src="game-shell.js"></script>
 </body>
 </html>

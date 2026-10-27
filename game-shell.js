@@ -9,7 +9,7 @@
   document.querySelector("#menu-play").onclick=()=>{
     const name=input.value.trim(); if(!name){input.focus();input.setCustomValidity("Escribe tu nombre para guardar tu tiempo.");input.reportValidity();return;}
     input.setCustomValidity("");progress.setPlayerName(name);document.querySelector("#mini-player-name").textContent=name;
-    menu.hidden=true;document.body.classList.add("game-started");
+    menu.hidden=true;document.body.classList.add("game-started");window.jordyMusic?.startGame();
   };
   input.oninput=()=>input.setCustomValidity("");
   function formatTime(s){const h=Math.floor(s/3600),m=Math.floor(s%3600/60);return h?h+" h "+m+" min":m?m+" min":s+" s";}
@@ -20,6 +20,14 @@
     document.querySelector("#menu-ranking-list").innerHTML="<ol>"+html+"</ol>";
   }
   const soundSetting=document.querySelector("#sound-setting");
+  const musicSetting=document.querySelector("#music-setting");
+  const musicVolume=document.querySelector("#music-volume");
+  const volumeLabel=document.querySelector("#music-volume-label");
+  musicSetting.checked=window.jordyMusic?.isEnabled()??true;
+  musicVolume.value=window.jordyMusic?.getVolume()??0.22;
+  volumeLabel.textContent=Math.round(Number(musicVolume.value)*100)+"%";
+  musicSetting.onchange=e=>window.jordyMusic?.setEnabled(e.target.checked);
+  musicVolume.oninput=e=>{window.jordyMusic?.setVolume(Number(e.target.value));volumeLabel.textContent=Math.round(Number(e.target.value)*100)+"%";};
   soundSetting.checked=window.jordySound?.isEnabled()??true;
   soundSetting.onchange=e=>window.jordySound?.setEnabled(e.target.checked);
   const mini=document.querySelector("#mini-jordy"), toggle=document.querySelector("#overlay-toggle");

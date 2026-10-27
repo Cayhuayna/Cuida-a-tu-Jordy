@@ -332,3 +332,4 @@ body[data-view="ranking"] .ranking-section{display:block;max-width:850px;margin:
 .game-menu{background-image:radial-gradient(ellipse at 50% 84%,#b49b68 0 15%,#c9b681 15.4% 20%,transparent 20.5%),linear-gradient(180deg,#c2d0ad,#718764 62%,#647b58)}
 .jordy-sleeping .jordy-image{animation-duration:5.5s,8s;filter:brightness(.78) saturate(.72)}@media(max-width:920px){.day-header{display:flex;gap:3px;padding:4px 5px;font-size:8px}.day-header i{max-width:55px;overflow:hidden;text-overflow:ellipsis}}@media(max-width:650px){.day-header{font-size:8px}.day-header i{display:none}}
 .jordy-sleeping[data-view="jordy"] .pet-thought:after{content:"Zzz";position:absolute;top:-35px;right:0;color:#496c9c;font-size:18px;font-weight:800;animation:sleep-zzz 1.8s ease-in-out infinite}
+.music-control{display:flex;align-items:center;gap:9px;margin-top:8px}.music-control input[type=range]{flex:1;accent-color:#286343}.music-control span{min-width:34px;text-align:right;font-size:10px}
