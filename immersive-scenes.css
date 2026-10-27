@@ -240,3 +240,95 @@ body[data-view="penalty"] .site-header, body[data-view="penalty"] .category-nav 
   .shot-controls>div { gap: 5px; }
   .shot-controls button { padding: 9px 8px; font-size: 9px; }
 }
+
+body[data-view="jordy"] .sleep-button { background: #e8edf7; border-color: #d0d8e6; color: #475a79; }
+body[data-view="jordy"] .sleep-button:disabled { opacity: .7; cursor: wait; }
+
+.cart-balance strong { color: #4e793b; }
+#checkout-button:disabled { opacity: .48; cursor: not-allowed; }
+.starter-kit-modal[hidden] { display: none; }
+.starter-kit-modal { position: fixed; z-index: 9000; inset: 0; display: grid; place-items: center; overflow: auto; padding: 20px; background: #10291dc9; backdrop-filter: blur(5px); }
+.starter-kit-card { width: min(100%, 440px); padding: 30px; border: 1px solid #dfe8cd; border-radius: 20px; color: #263a2d; background: #fffef6; box-shadow: 0 24px 80px #06190f80; text-align: center; }
+.starter-kit-icon { display: grid; place-items: center; width: 64px; height: 64px; margin: 0 auto 14px; border-radius: 20px; background: #e7efd7; font-size: 34px; }
+.starter-kit-card .eyebrow { margin: 0 0 6px; }
+.starter-kit-card h2 { margin: 0; color: #174b32; font: 800 27px var(--display); letter-spacing: -1px; }
+.starter-kit-card>p:not(.eyebrow) { color: #737a6d; font-size: 12px; }
+.starter-kit-card>p strong { color: #527c34; }
+.starter-kit-card ul { display: grid; gap: 7px; margin: 18px 0 22px; padding: 0; list-style: none; text-align: left; }
+.starter-kit-card li { padding: 9px 12px; border: 1px solid #ecede3; border-radius: 8px; background: #fafaf3; font-size: 12px; font-weight: 600; }
+.starter-kit-card button { width: 100%; border: 0; border-radius: 9px; padding: 13px 18px; color: white; background: #245b3c; font: 700 12px var(--sans); cursor: pointer; }
+.starter-kit-card button:hover { background: #19462d; }
+/* Persistent XP HUD, growth stages and laboratory room. */
+.xp-hud { position: fixed; z-index: 8500; left: 18px; bottom: 16px; width: min(270px, calc(100vw - 36px)); padding: 11px 13px; border: 1px solid #ffffff85; border-radius: 13px; color: #f8f8e8; background: #174932ed; box-shadow: 0 8px 28px #10291d52; backdrop-filter: blur(8px); pointer-events: none; font: 600 11px var(--sans); }
+.xp-hud-top { display: flex; justify-content: space-between; gap: 10px; }
+.xp-hud-top strong { color: #d5ed82; }
+.xp-hud-top>span:last-child { color: #e4edc8; }
+.xp-hud-track { height: 8px; margin: 8px 0 5px; overflow: hidden; border-radius: 99px; background: #ffffff30; }
+.xp-hud-track i { display: block; width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg,#a4d767,#e4df68); transition: width .45s ease; }
+.xp-hud small { color: #e0e8d2b8; font-size: 9px; }
+body[data-view="jordy"] .jordy-image { transition: height .8s cubic-bezier(.2,.7,.2,1), filter .6s ease; }
+.jordy-image { animation: jordy-breathe 3.8s ease-in-out infinite, jordy-sway 7s ease-in-out infinite; transform-origin: center bottom; }
+@keyframes jordy-breathe { 0%,100% { margin-bottom: 0; } 50% { margin-bottom: 9px; } }
+@keyframes jordy-sway { 0%,100% { filter: brightness(1.08) contrast(1.13) saturate(.82); } 50% { filter: brightness(1.1) contrast(1.15) saturate(.95); } }
+.jordy-image.pet-react { animation: pet-celebrate .9s ease-in-out; }
+@keyframes pet-celebrate { 20% { transform: translateX(-50%) translateY(-20px) rotate(-7deg) scale(1.04); } 48% { transform: translateX(-50%) translateY(0) rotate(7deg) scale(1.02); } 76% { transform: translateX(-50%) translateY(-12px) rotate(-4deg) scale(1.04); } }
+.lab-section { display: none; }
+body[data-view="laboratory"] { min-height: 100vh; background: radial-gradient(ellipse at 50% 20%,#b6d8bb,#628e79 70%,#315b50); }
+body[data-view="laboratory"] .topline, body[data-view="laboratory"] footer { display: none; }
+body[data-view="laboratory"] .site-header { height: 72px; color: white; background: #174932; padding: 0 3.4%; }
+body[data-view="laboratory"] .brand { color: #f7f8ef; }
+body[data-view="laboratory"] .brand-mark { border: 1px solid #a2cc72; background: #16442f; }
+body[data-view="laboratory"] .search { background: #ffffff22; border-color: #ffffff30; }
+body[data-view="laboratory"] .search input { color: white; }
+body[data-view="laboratory"] .category-nav { height: 50px; gap: clamp(14px,2vw,30px); background: #e4ebd2; padding: 0 3%; overflow-x: auto; }
+body[data-view="laboratory"] .home-main { display: block; width: 100%; max-width: none; height: calc(100vh - 122px); overflow: auto; padding: clamp(24px,5vh,55px) 5%; background: radial-gradient(circle at 15% 30%,#e5f3dc75 0 2px,transparent 4px),radial-gradient(circle at 78% 65%,#d9f1e175 0 3px,transparent 5px),linear-gradient(145deg,#a7c6a5,#557967); background-size: 70px 90px,110px 120px,auto; }
+body[data-view="laboratory"] .home-intro, body[data-view="laboratory"] .care-layout, body[data-view="laboratory"] .inventory-section, body[data-view="laboratory"] .catalog-section, body[data-view="laboratory"] .penalty-section { display: none; }
+body[data-view="laboratory"] .lab-section { display: block; max-width: 1100px; min-height: 70vh; margin: 0 auto; padding: clamp(22px,4vw,46px); border: 2px solid #d1e4c3; border-radius: 24px; color: #193d2d; background: #fffef0ee; box-shadow: 0 25px 75px #183e2d60; }
+.lab-section h2 { margin: 0; color: #194d34; font: 800 clamp(28px,4vw,44px) var(--display); }
+.lab-section .section-subtitle { max-width: 680px; }
+.lab-workbench { display: flex; align-items: center; gap: 24px; margin: 28px 0 18px; padding: clamp(20px,4vw,38px); border: 1px solid #e0e8d5; border-radius: 18px; background: linear-gradient(120deg,#e9f3df,#f4edd9); }
+.lab-flask { display: grid; flex: 0 0 112px; place-items: center; width: 112px; height: 112px; border-radius: 26px; background: #d9ebcc; font-size: 62px; animation: lab-bob 2.8s ease-in-out infinite; }
+@keyframes lab-bob { 50% { transform: translateY(-8px) rotate(5deg); } }
+.lab-workbench h3 { margin: 0 0 7px; color: #234833; font: 800 20px var(--display); }
+.lab-workbench p { color: #657468; line-height: 1.6; font-size: 13px; }
+.lab-workbench button { border: 0; border-radius: 9px; padding: 12px 19px; color: #fff; background: #205d3d; font: 700 12px var(--sans); cursor: pointer; }
+.lab-workbench button:disabled { opacity: .48; cursor: not-allowed; }
+#lab-recipe-status { margin-bottom: 0; font-size: 11px; }
+.lab-effects { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+.effect-chip { padding: 9px 12px; border: 1px solid #dce6ce; border-radius: 99px; color: #36543d; background: #f4f6ea; font-size: 11px; }
+@media(max-width:650px) { .xp-hud { left: 10px; bottom: 10px; width: min(230px,calc(100vw - 20px)); padding: 8px 10px; } .xp-hud small { font-size: 8px; } .lab-workbench { align-items: flex-start; flex-direction: column; } .lab-flask { flex-basis: 76px; width: 76px; height: 76px; font-size: 44px; } body[data-view="laboratory"] .home-main { height: calc(100vh - 112px); padding: 14px; } }
+.game-menu{position:fixed;z-index:12000;inset:0;display:grid;place-items:center;overflow:auto;padding:24px;background:radial-gradient(ellipse at 50% 40%,#c2d0ad,#718764 62%,#3e5b47)}
+.game-menu[hidden]{display:none}.game-menu:before{content:"";position:absolute;inset:0;opacity:.5;background:linear-gradient(180deg,#e5e5c1 0 57%,#83966e 57.2%),radial-gradient(ellipse at 50% 70%,#d9c79d,transparent 34%)}
+.menu-card{position:relative;z-index:2;width:min(100%,500px);padding:30px clamp(22px,5vw,48px);border:1px solid #e1e8d4;border-radius:23px;color:#294733;background:#fffef1ed;box-shadow:0 25px 90px #122a1b70;text-align:center;backdrop-filter:blur(9px)}
+.menu-card h1{margin:0 0 14px;font:800 clamp(30px,5vw,43px) var(--display)}.menu-card h1 em{color:#2d6746;font-family:Georgia,serif;font-weight:500}
+.menu-pet-orbit{position:relative;height:122px;margin:0 auto 10px}.menu-pet-orbit img{position:absolute;bottom:0;left:50%;width:82px;height:116px;object-fit:contain;filter:drop-shadow(0 7px 9px #273c2a4d);animation:menu-float 3s ease-in-out infinite}
+.menu-pet-orbit img:nth-child(2){width:50px;height:75px;left:23%;opacity:.68;animation-delay:-.9s}.menu-pet-orbit img:nth-child(3){width:62px;height:92px;left:66%;opacity:.75;animation-delay:-1.8s}
+@keyframes menu-float{50%{transform:translateY(-13px) rotate(4deg)}}.menu-sparkles{position:absolute;top:14%;width:100%;color:#f0f5cf;text-align:center;font-size:clamp(25px,5vw,50px);letter-spacing:12px;animation:menu-orbit 4s ease-in-out infinite}
+@keyframes menu-orbit{50%{transform:translateY(12px) rotate(3deg);opacity:.65}}.menu-room-decor{position:absolute;inset:auto 7% 4%;display:flex;justify-content:space-between;font-size:clamp(28px,5vw,55px)}
+.player-name-label{display:block;margin:12px 0 6px;text-align:left;font-size:11px;font-weight:700}#player-name-input{width:100%;border:1px solid #d9e1d0;border-radius:9px;padding:12px;color:#263d2d;background:white;font:600 13px var(--sans)}
+.menu-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.menu-actions button{min-height:43px;border:1px solid #d8e1cf;border-radius:9px;color:#28523a;background:#f7f8ee;font:700 11px var(--sans);cursor:pointer}
+.menu-actions button:first-child{grid-column:1/-1;border-color:#245c3b;color:white;background:#245c3b;font-size:14px}.menu-actions button:hover{transform:translateY(-2px);background:#e7efd9}.menu-actions button:first-child:hover{background:#17482d}
+.menu-panel{margin-top:13px;padding:13px;border:1px solid #e3e8d8;border-radius:10px;background:#f5f6eb;text-align:left;font-size:11px;line-height:1.55}.menu-panel p{margin:6px 0 0;color:#657267}.menu-panel[hidden]{display:none}.menu-panel input{accent-color:#286343}
+.day-badge{padding:5px 8px;border-radius:99px;color:#3e6046;background:#e9efd8;font-size:10px;white-space:nowrap}
+body.jordy-sleeping .pet-thought:after{content:"Zzz";position:absolute;top:-35px;right:0;color:#496c9c;font-size:18px;font-weight:800;animation:sleep-zzz 1.8s ease-in-out infinite}
+@keyframes sleep-zzz{50%{transform:translateY(-9px) translateX(6px);opacity:.5}}
+.mini-jordy{position:fixed;z-index:8200;right:18px;bottom:18px;display:grid;grid-template-columns:58px 1fr auto;align-items:center;gap:5px 10px;width:240px;padding:10px 12px;border:1px solid #e0e9d6;border-radius:15px;color:#f7f8ef;background:#174932f2;box-shadow:0 12px 40px #11281c75}
+.mini-jordy[hidden]{display:none}.mini-jordy>img{grid-row:1/3;width:54px;height:90px;object-fit:contain;animation:menu-float 3s ease-in-out infinite}
+.mini-jordy>strong{align-self:end;font:700 12px var(--display)}.mini-jordy>span{align-self:start;color:#d4e3c5;font-size:9px}
+.mini-actions{grid-column:2/4;display:flex;gap:6px}.mini-actions button{flex:1;border:0;border-radius:7px;padding:7px;color:#21462f;background:#d9eab9;cursor:pointer}
+.mini-close{position:absolute;top:3px;right:6px;border:0;color:white;background:transparent;font-size:18px;cursor:pointer}
+.ranking-section{display:none}body[data-view="ranking"]{min-height:100vh;background:radial-gradient(ellipse at 50% 20%,#eff2dc,#9bb28a 80%)}
+body[data-view="ranking"] .topline,body[data-view="ranking"] footer{display:none}body[data-view="ranking"] .site-header{color:white;background:#174932}
+body[data-view="ranking"] .home-main{display:block;width:100%;max-width:none;min-height:calc(100vh - 122px);padding:clamp(24px,5vh,55px) 5%;background:#acbf9d}
+body[data-view="ranking"] .home-intro,body[data-view="ranking"] .care-layout,body[data-view="ranking"] .inventory-section,body[data-view="ranking"] .catalog-section,body[data-view="ranking"] .penalty-section,body[data-view="ranking"] .lab-section{display:none}
+body[data-view="ranking"] .ranking-section{display:block;max-width:850px;margin:0 auto;padding:clamp(20px,4vw,42px);border:2px solid #2a6040;border-radius:18px;background:#fffef2f2;box-shadow:0 18px 55px #23402d35}
+.ranking-section h2{margin:0;color:#174b32;font:800 clamp(28px,4vw,42px) var(--display)}.ranking-list ol,#menu-ranking-list ol{display:grid;gap:8px;margin:18px 0;padding:0;list-style:none}
+.ranking-list li,#menu-ranking-list li{display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:12px;padding:13px;border:1px solid #e5e9dc;border-radius:9px;background:#fbfcf4;font-size:12px}
+.rank-number{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;color:#254b35;background:#e4edce;font-weight:800}.rank-empty{display:block!important;color:#748071}
+.local-ranking-note{display:block;color:#727d70;font-size:10px}
+@media(max-width:650px){.game-menu{padding:14px}.menu-card{padding:23px 18px}.menu-pet-orbit{height:100px}.menu-pet-orbit img{height:98px}.mini-jordy{right:8px;bottom:68px;width:205px}.day-badge{display:none}}
+.day-header{font-size:9px;color:#e5edda}.day-header b{color:#d8ed86}.day-header i{font-style:normal}@media(max-width:920px){.day-header{display:none}}
+.game-menu:after{content:"";position:absolute;left:5%;top:17%;width:clamp(110px,19vw,260px);height:clamp(100px,24vh,230px);border:clamp(7px,1vw,13px) solid #f3f1dc;background:linear-gradient(90deg,transparent 48%,#e8ecd6 49% 52%,transparent 53%),linear-gradient(0deg,transparent 48%,#e8ecd6 49% 52%,transparent 53%),linear-gradient(145deg,#c7dbbb,#8eae89);box-shadow:0 10px 30px #203c2366;opacity:.72;pointer-events:none}
+.game-menu{background-image:radial-gradient(ellipse at 50% 84%,#b49b68 0 15%,#c9b681 15.4% 20%,transparent 20.5%),linear-gradient(180deg,#c2d0ad,#718764 62%,#647b58)}
+.jordy-sleeping .jordy-image{animation-duration:5.5s,8s;filter:brightness(.78) saturate(.72)}@media(max-width:920px){.day-header{display:flex;gap:3px;padding:4px 5px;font-size:8px}.day-header i{max-width:55px;overflow:hidden;text-overflow:ellipsis}}@media(max-width:650px){.day-header{font-size:8px}.day-header i{display:none}}
+.jordy-sleeping[data-view="jordy"] .pet-thought:after{content:"Zzz";position:absolute;top:-35px;right:0;color:#496c9c;font-size:18px;font-weight:800;animation:sleep-zzz 1.8s ease-in-out infinite}

@@ -1,15 +1,32 @@
 const products = [
-  { id: 1, name: "Miel pura de abeja", category: "Alimentos", seller: "Apiario La Colmena", price: 24.9, emoji: "🍯", color: "#ead8b7", badge: "Favorito" },
-  { id: 2, name: "Café de altura", category: "Alimentos", seller: "Café Don Pepe", price: 32, emoji: "☕", color: "#d7c6b7", badge: "Local" },
-  { id: 3, name: "Bolso tejido a mano", category: "Moda", seller: "Manos de Cayhuayna", price: 48, emoji: "👜", color: "#e5c4a6", badge: "Hecho a mano" },
-  { id: 4, name: "Maceta de barro", category: "Hogar", seller: "Taller Tierra Viva", price: 18.5, emoji: "🪴", color: "#d4dfc4", badge: "Local" },
-  { id: 5, name: "Jabón de hierbas", category: "Belleza", seller: "Botánica Natural", price: 12, emoji: "🧼", color: "#e5e2bd", badge: "Natural" },
-  { id: 6, name: "Chocolate artesanal", category: "Alimentos", seller: "Cacao del Valle", price: 16.9, emoji: "🍫", color: "#ddc4b0", badge: "Favorito" },
-  { id: 7, name: "Audífonos inalámbricos", category: "Tecnología", seller: "Conecta Cayhuayna", price: 59.9, emoji: "🎧", color: "#cbd8d7", badge: "Nuevo" },
-  { id: 8, name: "Vela aromática", category: "Hogar", seller: "Luz de Casa", price: 21, emoji: "🕯️", color: "#ead9c2", badge: "Hecho a mano" },
+  { id: 1, name: "Miel pura de abeja", category: "Alimentos", seller: "Apiario La Colmena", price: 28, emoji: "🍯", color: "#ead8b7", badge: "Favorito" },
+  { id: 2, name: "Café de altura", category: "Alimentos", seller: "Café Don Pepe", price: 35, emoji: "☕", color: "#d7c6b7", badge: "Local" },
+  { id: 3, name: "Bolso tejido a mano", category: "Moda", seller: "Manos de Cayhuayna", price: 65, emoji: "👜", color: "#e5c4a6", badge: "Hecho a mano" },
+  { id: 4, name: "Maceta de barro", category: "Hogar", seller: "Taller Tierra Viva", price: 30, emoji: "🪴", color: "#d4dfc4", badge: "Local" },
+  { id: 5, name: "Jabón de hierbas", category: "Belleza", seller: "Botánica Natural", price: 24, emoji: "🧼", color: "#e5e2bd", badge: "Natural" },
+  { id: 6, name: "Chocolate artesanal", category: "Alimentos", seller: "Cacao del Valle", price: 22, emoji: "🍫", color: "#ddc4b0", badge: "Favorito" },
+  { id: 7, name: "Audífonos inalámbricos", category: "Tecnología", seller: "Conecta Cayhuayna", price: 120, emoji: "🎧", color: "#cbd8d7", badge: "Nuevo" },
+  { id: 8, name: "Vela aromática", category: "Hogar", seller: "Luz de Casa", price: 25, emoji: "🕯️", color: "#ead9c2", badge: "Hecho a mano" },
+  { id: 9, name: "Manzana de Cayhuayna", category: "Alimentos", seller: "Frutas Don Lucho", price: 5, emoji: "🍎", color: "#f0d4c7", badge: "Fresco" },
+  { id: 10, name: "Sándwich casero", category: "Alimentos", seller: "La Esquina Rica", price: 18, emoji: "🥪", color: "#e8d9b7", badge: "Preparado hoy" },
+  { id: 11, name: "Jugo natural", category: "Alimentos", seller: "Juguería Cayhuayna", price: 12, emoji: "🧃", color: "#f1dfb2", badge: "Natural" },
+  { id: 12, name: "Agua fresca", category: "Alimentos", seller: "Aguas del Valle", price: 4, emoji: "🥤", color: "#d0e8df", badge: "Hidratante" },
+  { id: 13, name: "Pelota de fútbol", category: "Juguetes", seller: "Deportes Cayhuayna", price: 75, emoji: "⚽", color: "#d9e4cf", badge: "¡A jugar!" },
+  { id: 14, name: "Peluche abrazable", category: "Juguetes", seller: "Nube de Algodón", price: 55, emoji: "🧸", color: "#e7d8cf", badge: "Suavecito" },
+  { id: 15, name: "Cama acogedora", category: "Hogar", seller: "Descanso Bonito", price: 90, emoji: "🛏️", color: "#d8dfed", badge: "Descanso" },
+  { id: 16, name: "Cepillo suave", category: "Belleza", seller: "Botánica Natural", price: 20, emoji: "🪥", color: "#d2e5db", badge: "Aseo" },
+  { id: 17, name: "Pera del huerto", category: "Alimentos", seller: "Huerto Cayhuayna", price: 9, emoji: "🍐", color: "#e4e9b8", badge: "Fresco" },
+  { id: 18, name: "Sopa casera", category: "Alimentos", seller: "Cocina de Mamá Rosa", price: 26, emoji: "🍲", color: "#efd5ad", badge: "Calientita" },
+  { id: 19, name: "Galletas de avena", category: "Alimentos", seller: "Horno del Barrio", price: 14, emoji: "🍪", color: "#ead1ac", badge: "Energía" },
+  { id: 20, name: "Cometa colorida", category: "Juguetes", seller: "Deportes Cayhuayna", price: 48, emoji: "🪁", color: "#d6e6dc", badge: "Diversión" },
+  { id: 21, name: "Perfume de lavanda", category: "Belleza", seller: "Botánica Natural", price: 32, emoji: "🪻", color: "#e4d9ec", badge: "Relajante" },
+  { id: 30, name: "Poción saciante", category: "Laboratorio", seller: "Laboratorio Jordy", price: 280, emoji: "🧪", color: "#d8e9b7", badge: "2 horas" },
+  { id: 31, name: "Poción de pausa", category: "Laboratorio", seller: "Laboratorio Jordy", price: 240, emoji: "⚗️", color: "#d2e5ed", badge: "26 minutos" },
+  { id: 32, name: "Poción de inmunidad", category: "Laboratorio", seller: "Laboratorio Jordy", price: 380, emoji: "🛡️", color: "#e5dcf0", badge: "20 minutos" },
+  { id: 33, name: "Poción desconocida", category: "Laboratorio", seller: "Laboratorio Jordy", price: 420, emoji: "❔", color: "#e9d5e4", badge: "Efecto sorpresa" },
 ];
 
-const money = (value) => `S/ ${value.toFixed(2)}`;
+const money = (value) => `🪙 ${Math.ceil(value)}`;
 const filtersEl = document.querySelector("#filters");
 const productsEl = document.querySelector("#products");
 const searchInput = document.querySelector("#search-input");
@@ -73,6 +90,11 @@ function renderCart() {
   }).join("");
   const subtotal = entries.reduce((sum, [id, quantity]) => sum + products.find((p) => p.id === Number(id)).price * quantity, 0);
   document.querySelector("#cart-subtotal").textContent = money(subtotal);
+  const coins = window.jordyProgress?.getSnapshot().coins ?? 0;
+  document.querySelector("#cart-balance").textContent = `🪙 ${coins}`;
+  const insufficient = Boolean(window.jordyProgress && coins < subtotal);
+  document.querySelector("#checkout-button").disabled = insufficient;
+  document.querySelector("#cart-economy-note").textContent = insufficient ? `Te faltan ${Math.ceil(subtotal - coins)} monedas para esta compra` : "Compra con monedas del juego · No es dinero real";
   itemsEl.querySelectorAll("[data-quantity]").forEach((button) => button.addEventListener("click", () => {
     const id = button.dataset.quantity;
     cart[id] = (cart[id] || 0) + Number(button.dataset.delta);
@@ -104,12 +126,14 @@ const viewNames = {
   homegoods: "MERCADO · HOGAR",
   care: "MERCADO · ASEO",
   penalty: "MINIJUEGO · PENALES",
+  laboratory: "LABORATORIO DE JORDY",
+  ranking: "RANKING DE CUIDADORES",
 };
 function setPageView(view) {
   document.body.dataset.view = view;
   document.querySelectorAll(".category-nav [data-view]").forEach((link) => link.classList.toggle("active", link.dataset.view === view));
   document.querySelector("#scene-label").textContent = viewNames[view] || viewNames.jordy;
-  if (view === "market" || view === "food" || view === "homegoods" || view === "care") {
+  if (view === "market" || view === "food" || view === "homegoods" || view === "care" || view === "laboratory" || view === "ranking") {
     document.querySelector("#catalogo").scrollTop = 0;
   }
 }
@@ -146,6 +170,12 @@ document.addEventListener("keydown", (event) => { if (event.key === "Escape") se
 document.querySelector("#checkout-button").addEventListener("click", () => {
   const bought = Object.entries(cart).filter(([, quantity]) => quantity > 0);
   if (!bought.length) return;
+  const subtotal = bought.reduce((sum, [id, quantity]) => sum + products.find((product) => product.id === Number(id)).price * quantity, 0);
+  if (!window.jordyProgress?.spendCoins(subtotal)) {
+    const balance = window.jordyProgress?.getSnapshot().coins ?? 0;
+    showToast(`Te faltan ${Math.max(0, Math.ceil(subtotal - balance))} monedas para comprar eso`);
+    return;
+  }
   const inventory = JSON.parse(localStorage.getItem("market-jordy-inventory") || "{}");
   bought.forEach(([id, quantity]) => { inventory[id] = (inventory[id] || 0) + quantity; });
   localStorage.setItem("market-jordy-inventory", JSON.stringify(inventory));
@@ -161,3 +191,8 @@ renderFilters();
 renderProducts();
 renderCart();
 setPageView("jordy");
+
+window.addEventListener("jordy-progress-updated", (event) => {
+  renderCart();
+  if (event.detail.levelsGained > 0) showToast("¡Subiste al nivel " + event.detail.level + "! Monedas extra" + (event.detail.milestoneKits ? " y kit bono recibido 🎁" : ""));
+});
