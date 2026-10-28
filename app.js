@@ -20,10 +20,23 @@ const products = [
   { id: 19, name: "Galletas de avena", category: "Alimentos", seller: "Horno del Barrio", price: 14, emoji: "🍪", color: "#ead1ac", badge: "Energía" },
   { id: 20, name: "Cometa colorida", category: "Juguetes", seller: "Deportes Cayhuayna", price: 48, emoji: "🪁", color: "#d6e6dc", badge: "Diversión" },
   { id: 21, name: "Perfume de lavanda", category: "Belleza", seller: "Botánica Natural", price: 32, emoji: "🪻", color: "#e4d9ec", badge: "Relajante" },
+  { id: 22, name: "Menú de pollo a la brasa", category: "Alimentos", seller: "La Olla de Cayhuayna", price: 42, emoji: "🍗", color: "#f0d6b6", badge: "Menú" },
+  { id: 23, name: "Menú de lomo saltado", category: "Alimentos", seller: "La Olla de Cayhuayna", price: 48, emoji: "🍛", color: "#ead1ae", badge: "Menú" },
+  { id: 24, name: "Menú de tallarines verdes", category: "Alimentos", seller: "Sazón del Barrio", price: 38, emoji: "🍝", color: "#d9e5bd", badge: "Menú" },
+  { id: 25, name: "Menú de ceviche", category: "Alimentos", seller: "Sazón del Barrio", price: 52, emoji: "🐟", color: "#d5e9df", badge: "Menú" },
+  { id: 26, name: "Menú de arroz chaufa", category: "Alimentos", seller: "El Wok de Cayhuayna", price: 40, emoji: "🥡", color: "#efddb5", badge: "Menú" },
+  { id: 27, name: "Menú de ají de gallina", category: "Alimentos", seller: "La Olla de Cayhuayna", price: 44, emoji: "🍲", color: "#ebd7bf", badge: "Menú" },
+  { id: 28, name: "Menú vegetariano", category: "Alimentos", seller: "Huerto Cayhuayna", price: 36, emoji: "🥗", color: "#d9e7c6", badge: "Menú" },
   { id: 30, name: "Poción saciante", category: "Laboratorio", seller: "Laboratorio Jordy", price: 280, emoji: "🧪", color: "#d8e9b7", badge: "2 horas" },
   { id: 31, name: "Poción de pausa", category: "Laboratorio", seller: "Laboratorio Jordy", price: 240, emoji: "⚗️", color: "#d2e5ed", badge: "26 minutos" },
   { id: 32, name: "Poción de inmunidad", category: "Laboratorio", seller: "Laboratorio Jordy", price: 380, emoji: "🛡️", color: "#e5dcf0", badge: "20 minutos" },
   { id: 33, name: "Poción desconocida", category: "Laboratorio", seller: "Laboratorio Jordy", price: 420, emoji: "❔", color: "#e9d5e4", badge: "Efecto sorpresa" },
+  { id: 35, name: "Poción de vitalidad", category: "Laboratorio", seller: "Laboratorio Jordy", price: 320, emoji: "❤️‍🩹", color: "#f0c9c4", badge: "+60 HP" },
+  { id: 36, name: "Poción de limpieza", category: "Laboratorio", seller: "Laboratorio Jordy", price: 290, emoji: "🫧", color: "#cce9df", badge: "+55 aseo" },
+  { id: 37, name: "Poción de alegría", category: "Laboratorio", seller: "Laboratorio Jordy", price: 310, emoji: "🌈", color: "#e9d5ed", badge: "+35 ánimo" },
+  { id: 38, name: "Poción de equilibrio", category: "Laboratorio", seller: "Laboratorio Jordy", price: 480, emoji: "⚖️", color: "#d9e5cf", badge: "Todo +15" },
+  { id: 39, name: "Poción de escudo largo", category: "Laboratorio", seller: "Laboratorio Jordy", price: 520, emoji: "🔰", color: "#d8e2f0", badge: "45 minutos" },
+  { id: 40, name: "Poción de la suerte", category: "Laboratorio", seller: "Laboratorio Jordy", price: 360, emoji: "🍀", color: "#d6e8bd", badge: "Sorpresa" },
 ];
 
 const money = (value) => `🪙 ${Math.ceil(value)}`;
@@ -126,6 +139,8 @@ const viewNames = {
   homegoods: "MERCADO · HOGAR",
   care: "MERCADO · ASEO",
   penalty: "MINIJUEGO · PENALES",
+  catch: "MINIJUEGO · ATRAPA COMIDA",
+  redemption: "CANJEO DE PUNTOS",
   laboratory: "LABORATORIO DE JORDY",
   ranking: "RANKING DE CUIDADORES",
 };
@@ -133,7 +148,7 @@ function setPageView(view) {
   document.body.dataset.view = view;
   document.querySelectorAll(".category-nav [data-view]").forEach((link) => link.classList.toggle("active", link.dataset.view === view));
   document.querySelector("#scene-label").textContent = viewNames[view] || viewNames.jordy;
-  if (view === "market" || view === "food" || view === "homegoods" || view === "care" || view === "laboratory" || view === "ranking") {
+  if (view === "market" || view === "food" || view === "homegoods" || view === "care" || view === "laboratory" || view === "ranking" || view === "catch" || view === "redemption") {
     document.querySelector("#catalogo").scrollTop = 0;
   }
 }

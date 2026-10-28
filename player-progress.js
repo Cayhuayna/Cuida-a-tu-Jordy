@@ -3,7 +3,7 @@
   const INVENTORY_KEY = "market-jordy-inventory";
   const starterKit = { 1: 25, 6: 8, 5: 18, 9: 25, 11: 12 };
   const bonusKit = { 1: 4, 6: 2, 11: 2, 12: 3, 20: 1 };
-  const defaults = { coins: 0, xp: 0, activeSeconds: 0, activeXpMinutes: 0, startedAt: Date.now(), rankAccountedSeconds: 0, playerName: "", starterKitGranted: false, penalties: { goals: 0, saves: 0, shots: 0 } };
+  const defaults = { coins: 0, points: 0, xp: 0, activeSeconds: 0, activeXpMinutes: 0, startedAt: Date.now(), rankAccountedSeconds: 0, playerName: "", starterKitGranted: false, penalties: { goals: 0, saves: 0, shots: 0 } };
   let progress = { ...defaults };
   try {
     progress = { ...defaults, ...(JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}")) };
@@ -11,7 +11,7 @@
     progress = { ...defaults };
   }
   progress.penalties = { ...defaults.penalties, ...(progress.penalties || {}) };
-  ["coins", "xp", "activeSeconds", "activeXpMinutes"].forEach((key) => { progress[key] = Math.max(0, Math.floor(Number(progress[key]) || 0)); });
+  ["coins", "points", "xp", "activeSeconds", "activeXpMinutes"].forEach((key) => { progress[key] = Math.max(0, Math.floor(Number(progress[key]) || 0)); });
 
   let showStarterKit = false;
   if (!progress.starterKitGranted) {
@@ -52,6 +52,7 @@
   function resetGame() {
     updateRanking();
     progress.coins = 750;
+    progress.points = 0;
     progress.xp = 0;
     progress.activeSeconds = 0;
     progress.activeXpMinutes = 0;
@@ -119,6 +120,21 @@
     save(before);
   }
 
+  function addPoints(amount) {
+    progress.points += Math.max(0, Math.floor(Number(amount) || 0));
+    save();
+  }
+
+  function redeemPoints(amount) {
+    const points = Math.max(0, Math.floor(Number(amount) || 0));
+    const coins = points === 500 ? 900 : points === 100 ? 90 : 0;
+    if (!coins || progress.points < points) return false;
+    progress.points -= points;
+    progress.coins += coins;
+    save();
+    return coins;
+  }
+
   function spendCoins(amount) {
     const cost = Math.max(0, Math.ceil(Number(amount) || 0));
     if (progress.coins < cost) return false;
@@ -143,7 +159,7 @@
   }
 
   function getSnapshot() { return JSON.parse(JSON.stringify(progress)); }
-  window.jordyProgress = { awardXP, addCoins, spendCoins, recordPenalty, getSnapshot, render, setPlayerName, resetGame, updateRanking };
+  window.jordyProgress = { awardXP, addCoins, addPoints, redeemPoints, spendCoins, recordPenalty, getSnapshot, render, setPlayerName, resetGame, updateRanking };
 
   if (showStarterKit) {
     const modal = document.querySelector("#starter-kit-modal");

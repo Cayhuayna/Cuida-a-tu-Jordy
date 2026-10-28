@@ -21,17 +21,31 @@ const catalog = [
   { id: 19, name: "Galletas de avena", category: "Alimentos", emoji: "🍪", color: "#ead1ac", deltas: { food: 8, energy: 7, clean: -1, joy: 5, health: 1 }, effect: "+8% alimentación · +7% energía · −1% aseo · +5% ánimo · +1% salud", comment: "¡Crujientes y ricas! 🍪" },
   { id: 20, name: "Cometa colorida", category: "Juguetes", emoji: "🪁", color: "#d6e6dc", deltas: { energy: -7, clean: -2, joy: 20, health: 1 }, effect: "−7% energía · −2% aseo · +20% ánimo · +1% salud", comment: "¡Mira cómo vuela la cometa! 🪁" },
   { id: 21, name: "Perfume de lavanda", category: "Belleza", emoji: "🪻", color: "#e4d9ec", deltas: { energy: 2, clean: 22, joy: 8, health: 0 }, effect: "+2% energía · +22% aseo · +8% ánimo", comment: "Huele a lavanda y calma un montón 🪻" },
+  { id: 22, name: "Menú de pollo a la brasa", category: "Alimentos", emoji: "🍗", color: "#f0d6b6", deltas: { food: 38, energy: 9, clean: -3, joy: 13, health: 9 }, effect: "+38% alimentación · +9% energía · −3% aseo · +13% ánimo · +9% salud", comment: "¡Pollo a la brasa! Me guardas una papita 🍗" },
+  { id: 23, name: "Menú de lomo saltado", category: "Alimentos", emoji: "🍛", color: "#ead1ae", deltas: { food: 42, energy: 12, clean: -4, joy: 15, health: 7 }, effect: "+42% alimentación · +12% energía · −4% aseo · +15% ánimo · +7% salud", comment: "¡Ese lomo saltado está buenazo! 🍛" },
+  { id: 24, name: "Menú de tallarines verdes", category: "Alimentos", emoji: "🍝", color: "#d9e5bd", deltas: { food: 35, energy: 8, clean: -2, joy: 12, health: 10 }, effect: "+35% alimentación · +8% energía · −2% aseo · +12% ánimo · +10% salud", comment: "Tallarines verdes, mi menú favorito 🍝" },
+  { id: 25, name: "Menú de ceviche", category: "Alimentos", emoji: "🐟", color: "#d5e9df", deltas: { food: 32, energy: 14, clean: 2, joy: 16, health: 12 }, effect: "+32% alimentación · +14% energía · +2% aseo · +16% ánimo · +12% salud", comment: "¡Qué fresco y rico estuvo ese ceviche! 🐟" },
+  { id: 26, name: "Menú de arroz chaufa", category: "Alimentos", emoji: "🥡", color: "#efddb5", deltas: { food: 40, energy: 15, clean: -3, joy: 12, health: 8 }, effect: "+40% alimentación · +15% energía · −3% aseo · +12% ánimo · +8% salud", comment: "¡Un chaufa completito para recuperar fuerzas! 🥡" },
+  { id: 27, name: "Menú de ají de gallina", category: "Alimentos", emoji: "🍲", color: "#ebd7bf", deltas: { food: 37, energy: 7, clean: -2, joy: 18, health: 11 }, effect: "+37% alimentación · +7% energía · −2% aseo · +18% ánimo · +11% salud", comment: "¡Ese ají de gallina sí que reconforta! 🍲" },
+  { id: 28, name: "Menú vegetariano", category: "Alimentos", emoji: "🥗", color: "#d9e7c6", deltas: { food: 30, energy: 10, clean: 5, joy: 11, health: 15 }, effect: "+30% alimentación · +10% energía · +5% aseo · +11% ánimo · +15% salud", comment: "¡Un menú fresquito y saludable! 🥗" },
   { id: 30, name: "Poción saciante", category: "Laboratorio", emoji: "🧪", color: "#d8e9b7", potion: "hunger", effect: "Evita que baje la alimentación durante 2 horas", comment: "¡Barriga llena por mucho tiempo! 🧪" },
   { id: 31, name: "Poción de pausa", category: "Laboratorio", emoji: "⚗️", color: "#d2e5ed", potion: "energy", effect: "Evita que baje la energía durante 26 minutos", comment: "Puedo seguir despierto un rato más ⚗️" },
   { id: 32, name: "Poción de inmunidad", category: "Laboratorio", emoji: "🛡️", color: "#e5dcf0", potion: "immunity", effect: "Evita daño a la salud durante 20 minutos", comment: "¡Me siento protegido! 🛡️" },
   { id: 33, name: "Poción desconocida", category: "Laboratorio", emoji: "❔", color: "#e9d5e4", potion: "unknown", effect: "Efecto aleatorio: puede ayudar o salir mal", comment: "No sé qué va a pasar… ¡glup! ❔" },
   { id: 34, name: "Elixir secreto", category: "Laboratorio", emoji: "✨", color: "#e8dfaa", potion: "secret", effect: "Saciedad 2 h + energía protegida 26 min + inmunidad 20 min", comment: "¡La fórmula secreta funciona! ✨" },
+  { id: 35, name: "Poción de vitalidad", category: "Laboratorio", emoji: "❤️‍🩹", color: "#f0c9c4", potion: "vitality", effect: "+60 salud · +20 energía · +5 ánimo", comment: "¡Siento el corazón lleno de energía! ❤️‍🩹" },
+  { id: 36, name: "Poción de limpieza", category: "Laboratorio", emoji: "🫧", color: "#cce9df", potion: "clean", effect: "+55 aseo · −3 energía", comment: "¡Burbujeante y limpito! 🫧" },
+  { id: 37, name: "Poción de alegría", category: "Laboratorio", emoji: "🌈", color: "#e9d5ed", potion: "joy", effect: "+35 ánimo · +5 energía · −3 alimentación", comment: "¡Todo se ve más alegre! 🌈" },
+  { id: 38, name: "Poción de equilibrio", category: "Laboratorio", emoji: "⚖️", color: "#d9e5cf", potion: "balance", effect: "+15 a cada necesidad y salud", comment: "¡Me siento en armonía! ⚖️" },
+  { id: 39, name: "Poción de escudo largo", category: "Laboratorio", emoji: "🔰", color: "#d8e2f0", potion: "longImmunity", effect: "Inmunidad al daño durante 45 minutos", comment: "¡Mi escudo durará más tiempo! 🔰" },
+  { id: 40, name: "Poción de la suerte", category: "Laboratorio", emoji: "🍀", color: "#d6e8bd", potion: "luck", effect: "Resultado sorpresa: puede ser positivo o negativo", comment: "¡A ver si hoy me sonríe la suerte! 🍀" },
 ];
 
-const defaults = { food: 72, energy: 78, clean: 74, joy: 80, health: 100, updatedAt: Date.now(), dayStartedAt: Date.now(), energyClockAt: Date.now(), energyDrainMs: 0, sleepRecoveryMs: 0 };
+const defaults = { food: 72, energy: 78, clean: 74, joy: 80, health: 100, updatedAt: Date.now(), dayStartedAt: Date.now(), lastRewardDay: 0, energyClockAt: Date.now(), energyDrainMs: 0, sleepRecoveryMs: 0 };
 let state = JSON.parse(localStorage.getItem("market-jordy-care") || "null") || defaults;
 if (typeof state.health !== "number") state.health = 100;
 state.dayStartedAt = Number(state.dayStartedAt) || Number(state.updatedAt) || Date.now();
+if (!Number.isFinite(state.lastRewardDay)) state.lastRewardDay = Math.floor(Math.max(0, Date.now() - state.dayStartedAt) / 3600000);
 state.energyClockAt = Number(state.energyClockAt) || Number(state.updatedAt) || Date.now();
 state.energyDrainMs = Math.max(0, Number(state.energyDrainMs) || 0);
 state.sleepRecoveryMs = Math.max(0, Number(state.sleepRecoveryMs) || 0);
@@ -76,7 +90,7 @@ function showDeathScreen() {
 function resetJordy() {
   const now = Date.now();
   window.jordyProgress?.resetGame();
-  state = { ...defaults, updatedAt: now, dayStartedAt: now, energyClockAt: now, energyDrainMs: 0, sleepRecoveryMs: 0, lastDecay: {}, lastDamage: {}, damageTier: {} };
+  state = { ...defaults, updatedAt: now, dayStartedAt: now, lastRewardDay: 0, energyClockAt: now, energyDrainMs: 0, sleepRecoveryMs: 0, lastDecay: {}, lastDamage: {}, damageTier: {} };
   ["food", "energy", "clean", "joy"].forEach((key) => { state.lastDecay[key] = now; });
   ["food", "energy", "clean"].forEach((key) => { state.lastDamage[key] = now; state.damageTier[key] = ""; });
   gameOver = false;
@@ -88,6 +102,14 @@ function resetJordy() {
 
 function applyTime() {
   const now = Date.now();
+  const passedDays = Math.floor(Math.max(0, now - state.dayStartedAt) / 3600000);
+  if (passedDays > state.lastRewardDay) {
+    const earned = (passedDays - state.lastRewardDay) * 50;
+    state.lastRewardDay = passedDays;
+    window.jordyProgress?.addPoints(earned);
+    document.querySelector("#pet-thought").textContent = `¡Nuevo día! Ganaste ${earned} puntos de canje 🎁`;
+    showToast(`Día ${passedDays + 1} · +${earned} puntos de canje`);
+  }
   const rates = { energy: [12000, 1], food: [21000, 4], clean: [14000, 1], joy: [30000, 3] };
   let changed = false;
   const sleepTotal = (time) => {
@@ -185,6 +207,12 @@ function renderNeeds() {
   if (sleepLabel) sleepLabel.textContent = isSleeping ? "Durmiendo 😴" : "Despierto";
   const miniDay = document.querySelector("#mini-day");
   if (miniDay) miniDay.textContent = "Día " + dayNumber + (isSleeping ? " · Durmiendo 😴" : " · Despierto");
+  const miniHealth = document.querySelector("#mini-health-bar"), miniFood = document.querySelector("#mini-food-bar");
+  if (miniHealth) miniHealth.style.width = `${Math.max(0,Math.min(100,hp/2))}%`;
+  if (miniFood) miniFood.style.width = `${clamp(Number(state.food))}%`;
+  const miniHealthValue=document.querySelector("#mini-health-value"),miniFoodValue=document.querySelector("#mini-food-value");
+  if(miniHealthValue)miniHealthValue.textContent=`${Math.round(hp)}%`;
+  if(miniFoodValue)miniFoodValue.textContent=`${Math.round(state.food)}%`;
   document.body.classList.toggle("jordy-sleeping", isSleeping);
   const lowest = Math.min(state.food, state.energy, state.clean, state.joy);
   document.querySelector("#mood-label").textContent = caption(lowest, "Jordy está feliz", "Jordy quiere un poquito de cuidado", "Jordy necesita tu ayuda");
@@ -245,6 +273,7 @@ function useProduct(id) {
   inventory[id] -= 1;
   if (inventory[id] <= 0) delete inventory[id];
   localStorage.setItem("market-jordy-inventory", JSON.stringify(inventory));
+  window.dispatchEvent(new CustomEvent("jordy-inventory-updated", { detail: { inventory } }));
   if (product.potion) {
     const now = Date.now();
     state.effects ||= {};
@@ -255,6 +284,22 @@ function useProduct(id) {
       state.effects.hungerUntil = now + 2 * 60 * 60 * 1000;
       state.effects.energyUntil = now + 26 * 60 * 1000;
       state.effects.immunityUntil = now + 20 * 60 * 1000;
+    }
+    const potionDeltas = {
+      vitality: { health: 60, energy: 20, joy: 5 }, clean: { clean: 55, energy: -3 },
+      joy: { joy: 35, energy: 5, food: -3 }, balance: { food: 15, energy: 15, clean: 15, joy: 15, health: 15 },
+    };
+    if (potionDeltas[product.potion]) Object.entries(potionDeltas[product.potion]).forEach(([key, delta]) => {
+      state[key] = key === "health" ? clampHealth(Number(state[key] || 0) + delta) : clamp(Number(state[key] || 0) + delta);
+    });
+    if (product.potion === "longImmunity") state.effects.immunityUntil = now + 45 * 60 * 1000;
+    if (product.potion === "luck") {
+      const outcomes = [
+        { text: "¡La suerte me sonrió! +30 salud y +20 ánimo 🍀", apply: () => { state.health = clampHealth(state.health + 30); state.joy = clamp(state.joy + 20); } },
+        { text: "¡Energía de la buena! +35 energía y +15 alimentación ⚡", apply: () => { state.energy = clamp(state.energy + 35); state.food = clamp(state.food + 15); } },
+        { text: "Uy, salió cruz… −15 energía y −10 ánimo 😵", apply: () => { state.energy = clamp(state.energy - 15); state.joy = clamp(state.joy - 10); } },
+      ];
+      const outcome = outcomes[Math.floor(Math.random() * outcomes.length)]; outcome.apply(); product.comment = outcome.text;
     }
     if (product.potion === "unknown") {
       const outcomes = [
